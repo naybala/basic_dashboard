@@ -27,7 +27,7 @@ class AuthService extends BaseController
         if (Auth::attempt($request)) {
             return redirect("/base");
         }
-        return redirect()->back()->with("message", 'wrong credentials');
+        return redirect()->back()->with("message", '');
     }
 
     public function logout()

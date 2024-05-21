@@ -6,6 +6,10 @@
             right: -270px;
         }
     </style>
+    <div class="flex justify-end gap-1">
+        <x-localization.lang />
+        <x-theme.adjustTheme />
+    </div>
     <x-common.failedMessage />
     <br><br><br><br><br>
     <div class="container mx-auto text-center mt-auto">
@@ -18,19 +22,14 @@
                 @csrf
                 <div class="w-[20rem] flex flex-col mx-auto">
                     <div class="px-2 flex flex-col pb-4">
-                        <label class="pb-2 pt-2 text-sm px-1 text-gray-500 dark:text-white font-mono"
-                            for="name">{{ __('messages.user_name') }}</label>
-                        <input
-                            class="border-2 text-sm border-gray-400 shadow-md rounded-md pb-2 pt-2 px-3 py-2 focus:border-2 focus:border-gray-600
-                    focus:outline-none placeholder-gray-600 focus:text-sm focus:font-mono font-mono text-gray-500"
-                            type="name" name="name" value="{{ old('name') }}" required>
+                        <x-common.label for="name" :title="__('messages.user_name')" />
+                        <x-common.textInput type="text" name="name" />
                         @error('name')
                             <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
                         @enderror
                     </div>
                     <div class=" px-2 flex flex-col pb-4">
-                        <label class="pb-2 pt-2 text-sm px-1 text-gray-500 dark:text-white font-mono"
-                            for="password">{{ __('messages.password') }}</label>
+                        <x-common.label for="password" :title="__('messages.password')" />
                         <input
                             class="border-2 placeholder:font-mono text-gray-500 text-sm border-gray-400 shadow-md rounded-md pb-2 pt-2 px-3 py-2
                                 focus:border-2 focus:border-gray-600
