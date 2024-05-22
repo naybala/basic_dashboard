@@ -23,18 +23,14 @@
                 <div class="w-[20rem] flex flex-col mx-auto">
                     <div class="px-2 flex flex-col pb-4">
                         <x-common.label for="name" :title="__('messages.user_name')" />
-                        <x-common.textInput type="text" name="name" />
+                        <x-common.Input type="text" name="name" />
                         @error('name')
                             <p class="text-red-600 text-xs mt-1">{{ $message }}</p>
                         @enderror
                     </div>
                     <div class=" px-2 flex flex-col pb-4">
                         <x-common.label for="password" :title="__('messages.password')" />
-                        <input
-                            class="border-2 placeholder:font-mono text-gray-500 text-sm border-gray-400 shadow-md rounded-md pb-2 pt-2 px-3 py-2
-                                focus:border-2 focus:border-gray-600
-                                focus:outline-none placeholder-gray-600 focus:text-sm"
-                            type="password" name="password" value="{{ old('password') }}" id="password" required>
+                        <x-common.Input type="password" name="password" id="password" />
                         <div class="container" id="togglePassword">
                             <svg class="w-5 h-5 cursor-pointer hidden" fill="none" stroke="currentColor"
                                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="showEyes">
@@ -54,12 +50,7 @@
                             </svg>
                         </div>
                     </div>
-                    <button
-                        class="px-2 mx-2 hover:bg-black text-bold text-1xl py-1 border-2 border-gray-900 mt-4 rounded-md
-                            focus:border-gray-900 active:border-gray-900 active:border-2 focus:border-2 bg-gray-800 text-white duration-300 transform"
-                        type="submit">
-                        Login
-                    </button>
+                    <x-common.Button type="submit" :title="__('messages.login_btn')" />
                 </div>
             </form>
         </div>
