@@ -17,6 +17,6 @@
 <body class="dark:bg-black">
     {{ $slot }}
 </body>
-@vite('resources/js/common/validateDisapper.js')
+@vite(['resources/js/common/validateDisapper.js', 'resources/js/common/sideActive.js', 'resources/js/common/navShowHide.js'])
 
 </html>

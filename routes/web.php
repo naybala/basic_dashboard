@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\LangController;
+use BasicDashboard\Web\Auth\Controllers\AuthController;
+use BasicDashboard\Web\Dashboard\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +19,6 @@ use Illuminate\Support\Facades\Route;
 require __DIR__ . "/Guest/guestRoute.php";
 require __DIR__ . "/Localization/localizationRoute.php";
 Route::group(['middleware' => ['auth']], function () {
-   Route::get('/base',function(){
-        dd("Hello");
-   });
+   Route::get('/', [DashboardController::class, 'index']);
+   Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });

@@ -18,7 +18,7 @@
     <br><br>
     <div class="">
         <div class="container justify-center flex items-center max-w-full mx-auto border-gray-600">
-            <form action="/" method="post">
+            <form action="/login" method="post">
                 @csrf
                 <div class="w-[20rem] flex flex-col mx-auto">
                     <div class="px-2 flex flex-col pb-4">
