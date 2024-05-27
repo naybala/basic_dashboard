@@ -76,7 +76,7 @@ return [
         'buttonImport' => "text-white bg-gray-600 hover:bg-gray-800 focus:ring-4
                             focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5  mb-0 ml-2
                             dark:bg-gray-600 dark:hover:bg-gray-600 focus:outline-none dark:focus:ring-gray-800",
-        'buttonCreate' => "text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded text-sm px-5 py-2.5 mr-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700",
+        'buttonCreate' => "text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded text-sm px-5 py-2.5 mr-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 rounded-md",
         'paginateNextButton' => "px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100
                                  hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400
                                   dark:hover:bg-gray-700 dark:hover:text-white",
@@ -99,8 +99,6 @@ return [
         "newButtonForm" => "text-gray-700 hover:text-white border border-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none
                         focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 w-full text-center mr-2 mb-2
                         dark:border-gray-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-800",
-        'buttonCreate' => "text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded text-sm
-                             px-5 py-2.5 mr-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700",
         'paginateNextButton' => "px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white",
         'paginatePrevButton' => "px-3 py-2 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white",
         'paginateLabel' => "px-3 py-2 text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white",

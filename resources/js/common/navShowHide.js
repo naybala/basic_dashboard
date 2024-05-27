@@ -4,7 +4,7 @@ var menuShow = document.querySelector("#menuShow");
 var menuHide = document.querySelector("#menuHide");
 var titleLong = document.querySelector("#titleLong");
 var titleShort = document.querySelector("#titleShort");
-var items = ["dashboard"];
+var items = ["dashboard", "user"];
 
 //For Menu Show Hide
 function sidebarHide() {

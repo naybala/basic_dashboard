@@ -53,5 +53,4 @@
         <x-common.loading></x-common.loading>
     </main>
     {{-- @vite('resources/js/common/deleteConfirm.js') --}}
-    @vite('resources/js/common/filter.js')
 </x-master-layout>
