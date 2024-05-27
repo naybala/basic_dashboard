@@ -24,7 +24,7 @@ class UserService extends BaseController
         $params = $request->only('keyword');
         $userList = $this->userRepository->getUserList($params);
         $userList = UserResource::collection($userList)->response()->getData(true);
-        return $this->returnView('hr.user.index', $userList, $params);
+        return $this->returnView('admin.user.index', $userList, $params);
     }
 
     ///////////////////////////This is Method Divider///////////////////////////////////////

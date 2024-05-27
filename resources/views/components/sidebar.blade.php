@@ -32,7 +32,7 @@
                 <br>
                 {{-- Dashboard --}}
                 <li class="" id="dashboardActive">
-                    <a href="#"
+                    <a href="{{ route('dashboard.index') }}"
                         class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-white">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
                             aria-hidden="true" id="dashboardIcon">
@@ -47,6 +47,23 @@
                     </a>
                 </li>
                 {{-- Dashboard_End --}}
+                {{-- User --}}
+                <li class="" id="userActive">
+                    <a href="{{ route('users.index') }}"
+                        class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-white">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true" id="userIcon">
+                            <path clip-rule="evenodd" fill-rule="evenodd"
+                                d="M2.25 13.5a8.25 8.25 0 018.25-8.25.75.75 0 01.75.75v6.75H18a.75.75 0 01.75.75 8.25 8.25 0 01-16.5 0z">
+                            </path>
+                            <path clip-rule="evenodd" fill-rule="evenodd"
+                                d="M12.75 3a.75.75 0 01.75-.75 8.25 8.25 0 018.25 8.25.75.75 0 01-.75.75h-7.5a.75.75 0 01-.75-.75V3z">
+                            </path>
+                        </svg>
+                        <span class="ml-3" id="userText">User</span>
+                    </a>
+                </li>
+                {{-- User --}}
                 <br>
             </ul>
 

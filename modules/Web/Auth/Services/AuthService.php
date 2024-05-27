@@ -25,7 +25,7 @@ class AuthService extends BaseController
     public function authorizeOperator($request)
     {
         if (Auth::attempt($request)) {
-            return redirect("/");
+            return redirect("/login");
         }
         return redirect()->back()->with("message", '');
     }

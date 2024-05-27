@@ -9,4 +9,7 @@ switch (sideActive) {
   case "Dashboard":
     mainSideActive("#dashboardActive");
     break;
+  case "User":
+    mainSideActive("#userActive");
+    break;
 }

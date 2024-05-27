@@ -22,6 +22,8 @@ class UserSeeder extends Seeder
                     'name' => 'NayBaLa',
                     'email' => 'superadmin@gmail.com',
                     'password' => Hash::make('12345678'),
+                    'created_by' => 1,
+                    'status' => 1,
                 ]
             ]);
     }

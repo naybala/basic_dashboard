@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 require __DIR__ . "/Guest/guestRoute.php";
 require __DIR__ . "/Localization/localizationRoute.php";
 Route::group(['middleware' => ['auth']], function () {
-   Route::get('/', [DashboardController::class, 'index']);
+   Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+   require __DIR__ . "/User/userRoute.php";
 });
