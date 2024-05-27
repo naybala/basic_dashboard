@@ -40,24 +40,8 @@
                                     <td class="px-6 py-4">
                                         <x-common.Status :status="$user['status']" />
                                     </td>
-
-                                    <form action=" {{ route('users.destroy', $user['id']) }}" method="post"
-                                        class="formActionDelete">
-                                        @csrf
-                                        @method('DELETE')
-                                        <td class="px-6 py-4 text-center">
-                                            <a href="{{ route('users.edit', $user['id']) }}">
-                                                <button type="button"
-                                                    class="{{ config('config.sampleForm.buttonEdit') }} lg:px-0 lg:pl-4 lg:pr-4">
-                                                    Edit
-                                                </button>
-                                                <button type="submit"
-                                                    class="{{ config('config.sampleForm.buttonDelete') }} lg:px-0 lg:pl-4 lg:pr-4 mt-1">
-                                                    Delete
-                                                </button>
-                                            </a>
-                                        </td>
-                                    </form>
+                                    <x-common.editAndDeleteButton deleteRoute="users.destroy" :deleteId="$user['id']"
+                                        editRoute="users.edit" />
                                 </tr>
                             @endforeach
                         </tbody>
