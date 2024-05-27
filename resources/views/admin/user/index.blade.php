@@ -1,4 +1,4 @@
-<x-master-layout name="User" headerName="User Account List">
+<x-master-layout name="User" headerName="{{ __('sidebar.user') }}">
     <main class="h-full overflow-y-auto">
         <div class="hidden" id="loadingFalse">
             <div class="container px-1 md:px-6 mx-auto grid">
@@ -6,11 +6,8 @@
                     {{-- Search --}}
                     <x-common.search :keyword="$keyword" />
                     {{-- Search --}}
+                    <x-common.createButton route="users.create" />
 
-                    <a href="{{ route('users.create') }}">
-                        <button type="button" class="{{ config('config.sampleForm.buttonCreate') }} mt-2">+
-                            Create</button>
-                    </a>
                 </div>
                 <br>
                 <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-4 mr-4 bg-green-400">
@@ -41,17 +38,7 @@
                                         {{ Str::limit($user['email'], 20) }}
                                     </td>
                                     <td class="px-6 py-4">
-                                        @if ($user['status'] == 1)
-                                            <div
-                                                class="w-20 text-center text-white bg-green-400  px-3 py-0.5 rounded-md mx-auto ">
-                                                Active
-                                            </div>
-                                        @else
-                                            <div
-                                                class="w-20 text-center text-white bg-red-400  px-3 py-0.5 rounded-md mx-auto">
-                                                Inactive
-                                            </div>
-                                        @endif
+                                        <x-common.Status :status="$user['status']" />
                                     </td>
 
                                     <form action=" {{ route('users.destroy', $user['id']) }}" method="post"

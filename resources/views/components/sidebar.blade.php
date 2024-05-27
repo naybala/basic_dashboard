@@ -1,7 +1,7 @@
 <div class="flex h-screen bg-gray-50 dark:bg-gray-900">
     <style>
         .activeNav {
-            background-color: #F9FAFB;
+            background-color: #bcc8d7;
             border-top-left-radius: 1rem;
             border-bottom-left-radius: 1rem;
             box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
@@ -23,9 +23,12 @@
     <aside class="z-20 w-64 overflow-y-hidden bg-gray-200  dark:bg-gray-800 flex-shrink-0 asideShowHide"
         id="asideShowHide">
         <div class=" text-gray-500 dark:text-gray-400 ">
-            <div class="pb-2 pt-1 activeNav">
-                <h1 class="text-black text-center text-xl pt-3 pb-3" id="titleLong">Basic Common Dashboard</h1>
-                <h1 class="text-black text-center text-xl hidden pt-3 pb-4" id="titleShort">B.C.D</h1>
+            <div class="pb-2 pt-1 ">
+                <h1 class="text-black dark:text-white text-center text-xl pt-3 pb-3" id="titleLong">
+                    {{ __('sidebar.main_heading') }}
+                </h1>
+                <h1 class="text-black text-center text-xl hidden pt-3 pb-4 dark:text-white" id="titleShort">
+                    {{ __('sidebar.main_heading_short') }}</h1>
             </div>
             <ul class="h-[90vh] overflow-y-hidden hover:overflow-y-auto aside sidebar-scrollbar">
 
@@ -43,7 +46,7 @@
                                 d="M12.75 3a.75.75 0 01.75-.75 8.25 8.25 0 018.25 8.25.75.75 0 01-.75.75h-7.5a.75.75 0 01-.75-.75V3z">
                             </path>
                         </svg>
-                        <span class="ml-3" id="dashboardText">Dashboard</span>
+                        <span class="ml-3" id="dashboardText">{{ __('sidebar.dashboard') }}</span>
                     </a>
                 </li>
                 {{-- Dashboard_End --}}
@@ -60,7 +63,7 @@
                                 d="M12.75 3a.75.75 0 01.75-.75 8.25 8.25 0 018.25 8.25.75.75 0 01-.75.75h-7.5a.75.75 0 01-.75-.75V3z">
                             </path>
                         </svg>
-                        <span class="ml-3" id="userText">User</span>
+                        <span class="ml-3" id="userText">{{ __('sidebar.user') }}</span>
                     </a>
                 </li>
                 {{-- User --}}

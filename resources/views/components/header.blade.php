@@ -1,8 +1,8 @@
 <header class="z-10 py-4 bg-white shadow-md dark:bg-gray-800">
     <div class="flex flex-row">
         <div>
-            <button class="p-1 mr-5 ml-2 rounded-md focus:outline-none focus:shadow-outline-purple" aria-label="Menu"
-                id="">
+            <button class="p-1 mr-5 ml-2 rounded-md focus:outline-none focus:shadow-outline-purple dark:text-white"
+                aria-label="Menu" id="">
                 <svg id="menuShowHide" class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" class="" id="menuHide"
                         d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
@@ -18,7 +18,7 @@
             class="container flex items-center justify-between h-full md:pr-6 mx-auto text-purple-600 dark:text-purple-300">
             <!-- Mobile hamburger -->
             <!-- Search input -->
-            <div class="items-center font-semibold text-gray-600 md:text-3xl" id="headerName">
+            <div class="items-center font-semibold text-gray-600 md:text-3xl dark:text-white" id="headerName">
                 {{ $headerName }}
             </div>
             <ul class="flex items-center justify-between sm:justify-end flex-shrink-0 space-x-6 md:mt-1 me-2">
@@ -26,7 +26,9 @@
 
                 {{-- id="dropdownDefaultButton" data-dropdown-toggle="dropdown" --}}
                 <div class="relative">
-                    <div>
+                    <div class="flex gap-3">
+                        <x-localization.lang />
+                        <x-theme.adjustTheme />
                         <div>
                             <strong class="text-gray-500" id="operatorName">{{ auth()->user()->name }}</strong>
                             <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"

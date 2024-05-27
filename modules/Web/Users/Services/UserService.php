@@ -31,7 +31,7 @@ class UserService extends BaseController
 
     public function create()
     {
-        return view('hr.user.create');
+        return view('admin.user.create');
     }
 
     ///////////////////////////This is Method Divider///////////////////////////////////////
