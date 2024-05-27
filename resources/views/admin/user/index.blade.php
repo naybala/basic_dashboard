@@ -63,7 +63,7 @@
                         </tbody>
                     </table>
                 </div>
-                {{-- <x-pagination :links="$operators['meta']['links']" :keyword="$keyword"></x-pagination> --}}
+                <x-common.pagination :links="$data['meta']['links']" :keyword="$keyword"></x-common.pagination>
             </div>
         </div>
         <x-common.loading></x-common.loading>
